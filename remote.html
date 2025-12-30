@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>מצגת אבו דאבי - שלט רחוק</title>
+    <style>
+        :root {
+            --gold: #C5A059;
+            --navy: #0A0E17;
+            --white: #F8F9FA;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--navy);
+            color: var(--white);
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            touch-action: manipulation;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        p {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+
+        .remote-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn:active {
+            background: var(--gold);
+            color: var(--navy);
+            transform: scale(0.95);
+        }
+
+        .status {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #4CAF50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="header">
+        <h1>שלט רחוק</h1>
+        <p>מצגת אבו דאבי</p>
+    </div>
+
+    <div class="remote-grid">
+        <button class="btn" id="nextBtn">הבא ⮕</button>
+        <button class="btn" id="prevBtn">⬅ הקודם</button>
+    </div>
+
+    <div class="status">
+        <div class="status-dot"></div>
+        מחובר למצגת
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+            socket.emit('command', 'next');
+            // Haptic feedback if available
+            if (window.navigator.vibrate) window.navigator.vibrate(50);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            socket.emit('command', 'prev');
+            if (window.navigator.vibrate) window.navigator.vibrate(50);
+        });
+
+        socket.on('connect', () => {
+            document.querySelector('.status').style.color = '#4CAF50';
+            document.querySelector('.status').innerHTML = '<div class="status-dot"></div> מחובר למצגת';
+        });
+
+        socket.on('disconnect', () => {
+            document.querySelector('.status').style.color = '#f44336';
+            document.querySelector('.status').innerHTML = '<div class="status-dot"></div> נותק הקשר';
+        });
+    </script>
+</body>
+
+</html>

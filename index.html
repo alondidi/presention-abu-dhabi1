@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Abu Dhabi - Your Dream Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Author Info -->
+    <div class="author-info">
+        <div class="author-badge-line"></div>
+        <div class="author-details-wrapper">
+            <span class="author-name">Alon Didi</span>
+            <span class="author-date">1/1/26</span>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <nav class="slide-nav">
+        <div class="nav-dot active" data-slide="0"></div>
+        <div class="nav-dot" data-slide="1"></div>
+        <div class="nav-dot" data-slide="2"></div>
+        <div class="nav-dot" data-slide="3"></div>
+        <div class="nav-dot" data-slide="4"></div>
+    </nav>
+
+    <!-- Arrow Navigation -->
+    <button class="nav-arrow prev" id="prevBtn">&#10094;</button>
+    <button class="nav-arrow next" id="nextBtn">&#10095;</button>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / 5
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-container">
+
+        <!-- Slide 1: Welcome -->
+        <section class="slide slide-1 active">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="welcome-badge">✈️ Your Next Adventure Awaits</div>
+                <h1 class="main-title">
+                    <span class="title-accent">Discover</span>
+                    <span class="city-name">Abu Dhabi</span>
+                </h1>
+                <p class="tagline">Where Ancient Heritage Meets Modern Luxury</p>
+                <div class="presenter-info">
+                    <div class="presenter-avatar">🌴</div>
+                    <div class="presenter-details">
+                        <span class="presented-by">Presented by</span>
+                        <span class="presenter-name">Your Travel Expert</span>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="float-item mosque">🕌</div>
+                <div class="float-item palm">🌴</div>
+                <div class="float-item star">⭐</div>
+                <div class="float-item camel">🐪</div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Geography & Climate -->
+        <section class="slide slide-2">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="section-badge">📍 Location & Climate</div>
+                <h2 class="slide-title">Gateway to the Arabian Gulf</h2>
+
+                <div class="info-grid">
+                    <div class="info-card glass-card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Geographic Position</h3>
+                        <ul class="feature-list">
+                            <li><strong>Continent:</strong> Asia (Arabian Peninsula)</li>
+                            <li><strong>Country:</strong> United Arab Emirates</li>
+                            <li><strong>Position:</strong> Central-Western UAE</li>
+                            <li><strong>Features:</strong> Persian Gulf Coast & Desert</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="card-icon">🌡️</div>
+                        <h3>Climate & Weather</h3>
+                        <ul class="feature-list">
+                            <li><strong>Type:</strong> Hot Desert Climate</li>
+                            <li><strong>Summer:</strong> 35-45°C (Hot & Humid)</li>
+                            <li><strong>Winter:</strong> 18-25°C (Perfect!)</li>
+                            <li><strong>Best Time:</strong> November - March</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card glass-card highlight-card">
+                        <div class="card-icon">👔</div>
+                        <h3>What to Pack</h3>
+                        <div class="outfit-grid">
+                            <div class="outfit-item">
+                                <span class="outfit-icon">👕</span>
+                                <span>Light Cotton</span>
+                            </div>
+                            <div class="outfit-item">
+                                <span class="outfit-icon">🕶️</span>
+                                <span>Sunglasses</span>
+                            </div>
+                            <div class="outfit-item">
+                                <span class="outfit-icon">👒</span>
+                                <span>Sun Hat</span>
+                            </div>
+                            <div class="outfit-item">
+                                <span class="outfit-icon">🧴</span>
+                                <span>Sunscreen</span>
+                            </div>
+                        </div>
+                        <p class="tip">💡 Modest clothing recommended for cultural sites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: History & Culture -->
+        <section class="slide slide-3">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="section-badge">📜 History & Culture</div>
+                <h2 class="slide-title">A City of Rich Heritage</h2>
+
+                <div class="timeline-container">
+                    <div class="history-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">3M+</span>
+                            <span class="stat-label">Population</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">250+</span>
+                            <span class="stat-label">Years of History</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Nationalities</span>
+                        </div>
+                    </div>
+
+                    <div class="culture-cards">
+                        <div class="culture-card">
+                            <div class="culture-icon">☪️</div>
+                            <h4>Religion & Traditions</h4>
+                            <p>Islam is the official religion. Experience the call to prayer, Ramadan festivities, and
+                                Eid celebrations.</p>
+                        </div>
+
+                        <div class="culture-card">
+                            <div class="culture-icon">🎭</div>
+                            <h4>Festivals & Events</h4>
+                            <p><strong>Abu Dhabi Festival</strong> (March) - Arts & Culture<br>
+                                <strong>F1 Grand Prix</strong> (November) - World-class racing
+                            </p>
+                        </div>
+
+                        <div class="culture-card">
+                            <div class="culture-icon">🤝</div>
+                            <h4>Emirati Hospitality</h4>
+                            <p>Famous Arabic coffee (Gahwa) and dates welcome. "Ahlan wa Sahlan" - You are among family!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Attractions -->
+        <section class="slide slide-4">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="section-badge">🏛️ Must-Visit Attractions</div>
+                <h2 class="slide-title">Unforgettable Experiences Await</h2>
+
+                <div class="attractions-showcase">
+                    <div class="attraction-card featured">
+                        <div class="attraction-image mosque-bg"></div>
+                        <div class="attraction-info">
+                            <span class="attraction-badge">🏆 #1 Attraction</span>
+                            <h3>Sheikh Zayed Grand Mosque</h3>
+                            <p>One of the world's largest mosques with stunning white marble and gold details</p>
+                            <div class="attraction-details">
+                                <span>🎟️ FREE Entry</span>
+                                <span>🕐 9AM - 10PM</span>
+                                <span>📅 Sat-Thu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image louvre-bg"></div>
+                        <div class="attraction-info">
+                            <span class="attraction-badge">🎨 Art & Culture</span>
+                            <h3>Louvre Abu Dhabi</h3>
+                            <p>Architectural masterpiece housing world-class art collections</p>
+                            <div class="attraction-details">
+                                <span>🎟️ $16 / 63 AED</span>
+                                <span>🕐 10AM - 6:30PM</span>
+                                <span>📅 Closed Mon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image ferrari-bg"></div>
+                        <div class="attraction-info">
+                            <span class="attraction-badge">🎢 Adventure</span>
+                            <h3>Ferrari World</h3>
+                            <p>World's fastest roller coaster & ultimate Ferrari experience</p>
+                            <div class="attraction-details">
+                                <span>🎟️ $75 / 295 AED</span>
+                                <span>🕐 12PM - 8PM</span>
+                                <span>📅 Daily</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Practical Info (Accommodation, Dining, Souvenirs) -->
+        <section class="slide slide-5">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <div class="section-badge">🗺️ Travel Essentials</div>
+                <h2 class="slide-title">Your Perfect Abu Dhabi Experience</h2>
+
+                <div class="essentials-grid">
+                    <div class="essential-card">
+                        <div class="essential-header">
+                            <span class="essential-icon">🏨</span>
+                            <h3>Where to Stay</h3>
+                        </div>
+                        <div class="recommendation">
+                            <h4>Emirates Palace Hotel ⭐⭐⭐⭐⭐</h4>
+                            <p>Corniche Road, iconic luxury resort</p>
+                            <div class="price-tag">From $350/night</div>
+                            <ul class="amenities">
+                                <li>🏖️ Private Beach</li>
+                                <li>🍽️ 14 Restaurants</li>
+                                <li>💆 World-class Spa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="essential-card">
+                        <div class="essential-header">
+                            <span class="essential-icon">🍽️</span>
+                            <h3>Where to Eat</h3>
+                        </div>
+                        <div class="recommendation">
+                            <h4>Al Fanar Restaurant</h4>
+                            <p>Yas Mall - Authentic Emirati Cuisine</p>
+                            <div class="price-tag">$20-40 per person</div>
+                            <div class="dish-highlight">
+                                <span class="dish-name">🥘 Try: Machboos</span>
+                                <p>Traditional spiced rice with tender lamb - the national dish!</p>
+                            </div>
+                            <span class="hours">🕐 10AM - 11PM Daily</span>
+                        </div>
+                    </div>
+
+                    <div class="essential-card">
+                        <div class="essential-header">
+                            <span class="essential-icon">🎁</span>
+                            <h3>Souvenirs to Bring Home</h3>
+                        </div>
+                        <div class="souvenirs-list">
+                            <div class="souvenir-item">
+                                <span class="souvenir-icon">🫖</span>
+                                <div>
+                                    <strong>Arabic Coffee Set</strong>
+                                    <p>Symbol of hospitality</p>
+                                </div>
+                            </div>
+                            <div class="souvenir-item">
+                                <span class="souvenir-icon">✨</span>
+                                <div>
+                                    <strong>Oud Perfume</strong>
+                                    <p>Luxury Arabian fragrance</p>
+                                </div>
+                            </div>
+                            <div class="souvenir-item">
+                                <span class="souvenir-icon">🐪</span>
+                                <div>
+                                    <strong>Camel Crafts</strong>
+                                    <p>Desert heritage symbol</p>
+                                </div>
+                            </div>
+                            <div class="souvenir-item">
+                                <span class="souvenir-icon">📿</span>
+                                <div>
+                                    <strong>Gold & Jewelry</strong>
+                                    <p>From famous Gold Souk</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Ready to Explore Abu Dhabi?</h3>
+                    <p>Book your 2-day adventure today! 🌟</p>
+                    <div class="cta-badges">
+                        <span class="cta-badge">✈️ Direct Flights Available</span>
+                        <span class="cta-badge">🛡️ Safe Destination</span>
+                        <span class="cta-badge">💎 Luxury for All Budgets</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Accessibility Widget -->
+    <div class="accessibility-widget" id="accessibilityWidget">
+        <button class="a11y-toggle" id="a11yToggle" title="Accessibility Menu">
+            <span class="a11y-icon">♿</span>
+        </button>
+        <div class="a11y-menu" id="a11yMenu">
+            <div class="a11y-header">Accessibility Settings</div>
+            <div class="a11y-section">
+                <span class="a11y-label">Font Size</span>
+                <div class="a11y-controls">
+                    <button id="fontDecrease" title="Decrease font size">A-</button>
+                    <button id="fontReset" title="Reset font size">Reset</button>
+                    <button id="fontIncrease" title="Increase font size">A+</button>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <span class="a11y-label">Contrast</span>
+                <div class="a11y-controls">
+                    <button id="contrastDefault" title="Default Theme">Default</button>
+                    <button id="contrastHigh" title="High Contrast Mode">High Contrast</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
