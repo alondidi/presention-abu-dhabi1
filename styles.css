@@ -310,9 +310,7 @@ body {
    SLIDE 1: WELCOME (THE HERO)
    ============================================ */
 
-.slide-1 {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920') center/cover;
-}
+
 
 .welcome-badge {
     display: inline-block;
@@ -472,39 +470,60 @@ body {
    SLIDE 2: GEOGRAPHY & CLIMATE
    ============================================ */
 
+.slide-1 {
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&v=2') center/cover;
+    /* Abu Dhabi Corniche */
+}
+
 .slide-2 {
-    background: url('https://images.unsplash.com/photo-1549413280-994119d51f25?w=1920') center/cover;
-    /* Population/Demographics vibe */
+    background: url('https://images.unsplash.com/photo-1629814405374-279477fd25cf?w=1920&v=2') center/cover;
+    /* Abu Dhabi Urban street */
 }
 
 .slide-3 {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920') center/cover;
-    /* Map/Coastal City vibe */
+    background: url('https://images.unsplash.com/photo-1512413273187-548ec2c95af9?w=1920&v=2') center/cover;
+    /* Abu Dhabi Islands */
 }
 
 .slide-4 {
-    background: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1920') center/cover;
-    /* Energy/Industry vibe */
+    background: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1920&v=2') center/cover;
+    /* Masdar City Solar */
 }
 
 .slide-5 {
-    background: url('https://images.unsplash.com/photo-1544015759-209210986944?w=1920') center/cover;
-    /* Religion/Culture vibe */
+    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&v=2') center/cover;
+    /* Grand Mosque */
 }
 
 .slide-6 {
-    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920') center/cover;
-    /* Landmark/Mosque vibe */
+    background: url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1920&v=2') center/cover;
+    /* Louvre Abu Dhabi */
 }
 
 .slide-7 {
-    background: url('https://images.unsplash.com/photo-1528659556704-7493a7f80879?w=1920') center/cover;
-    /* History/Al Ain vibe */
+    background: url('https://images.unsplash.com/photo-1583311910626-7756f10c699c?w=1920&v=2') center/cover;
+    /* Jahili Fort Al Ain */
 }
 
 .slide-8 {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920') center/cover;
-    /* Conclusion/Modern skyline */
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&v=3') center/cover;
+    /* Skyline */
+}
+
+/* Slide 6 Card Backgrounds */
+.mosque-bg {
+    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
+        url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&v=2') center/cover;
+}
+
+.louvre-bg {
+    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
+        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&v=2') center/cover;
+}
+
+.ferrari-bg {
+    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&v=2') center/cover;
 }
 
 .section-badge {
