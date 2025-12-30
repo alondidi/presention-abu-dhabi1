@@ -117,27 +117,100 @@
         <button class="btn" id="prevBtn">⬅ הקודם</button>
     </div>
 
+    <!-- Accessibility Controls -->
+    <div class="a11y-controls-remote">
+        <div class="a11y-header-remote">נגישות</div>
+        <div class="a11y-row">
+            <button class="a11y-btn" id="fontDown" title="Decrease font">A-</button>
+            <button class="a11y-btn" id="fontReset" title="Reset font">A</button>
+            <button class="a11y-btn" id="fontUp" title="Increase font">A+</button>
+        </div>
+        <button class="a11y-btn-wide" id="contrastToggle">ניגודיות גבוהה</button>
+    </div>
+
     <div class="status">
         <div class="status-dot"></div>
         מחובר למצגת
     </div>
+
+    <style>
+        .a11y-controls-remote {
+            margin-top: 30px;
+            width: 80%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .a11y-header-remote {
+            font-size: 14px;
+            color: var(--gold);
+            text-align: center;
+            opacity: 0.8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .a11y-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .a11y-btn {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .a11y-btn-wide {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .a11y-btn:active,
+        .a11y-btn-wide:active {
+            background: rgba(197, 160, 89, 0.2);
+            border-color: var(--gold);
+        }
+    </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
     <script>
         const socket = io();
         const nextBtn = document.getElementById('nextBtn');
         const prevBtn = document.getElementById('prevBtn');
+        const fontUp = document.getElementById('fontUp');
+        const fontDown = document.getElementById('fontDown');
+        const fontReset = document.getElementById('fontReset');
+        const contrastToggle = document.getElementById('contrastToggle');
 
-        nextBtn.addEventListener('click', () => {
-            socket.emit('command', 'next');
-            // Haptic feedback if available
-            if (window.navigator.vibrate) window.navigator.vibrate(50);
-        });
+        function sendCommand(cmd) {
+            socket.emit('command', cmd);
+            if (window.navigator.vibrate) window.navigator.vibrate(40);
+        }
 
-        prevBtn.addEventListener('click', () => {
-            socket.emit('command', 'prev');
-            if (window.navigator.vibrate) window.navigator.vibrate(50);
-        });
+        nextBtn.addEventListener('click', () => sendCommand('next'));
+        prevBtn.addEventListener('click', () => sendCommand('prev'));
+        fontUp.addEventListener('click', () => sendCommand('font-up'));
+        fontDown.addEventListener('click', () => sendCommand('font-down'));
+        fontReset.addEventListener('click', () => sendCommand('font-reset'));
+        contrastToggle.addEventListener('click', () => sendCommand('contrast-toggle'));
 
         socket.on('connect', () => {
             document.querySelector('.status').style.color = '#4CAF50';

@@ -35,8 +35,18 @@ class PresentationController {
 
             socket.on('remote-command', (cmd) => {
                 console.log('Received remote command:', cmd);
+
+                // Navigation
                 if (cmd === 'next') this.nextSlide();
                 if (cmd === 'prev') this.prevSlide();
+
+                // Accessibility (delegated to window.a11y)
+                if (window.a11y) {
+                    if (cmd === 'font-up') window.a11y.updateFontScale(0.1);
+                    if (cmd === 'font-down') window.a11y.updateFontScale(-0.1);
+                    if (cmd === 'font-reset') window.a11y.setFontScale(1);
+                    if (cmd === 'contrast-toggle') window.a11y.setContrast(!window.a11y.isHighContrast);
+                }
             });
         }
     }
@@ -352,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const particles = new ParticleBackground();
 
     // Initialize accessibility manager
-    const a11y = new AccessibilityManager();
+    window.a11y = new AccessibilityManager();
 
     // Add loading animation
     document.body.classList.add('loaded');
