@@ -473,7 +473,38 @@ body {
    ============================================ */
 
 .slide-2 {
-    background: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1920') center/cover;
+    background: url('https://images.unsplash.com/photo-1549413280-994119d51f25?w=1920') center/cover;
+    /* Population/Demographics vibe */
+}
+
+.slide-3 {
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920') center/cover;
+    /* Map/Coastal City vibe */
+}
+
+.slide-4 {
+    background: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1920') center/cover;
+    /* Energy/Industry vibe */
+}
+
+.slide-5 {
+    background: url('https://images.unsplash.com/photo-1544015759-209210986944?w=1920') center/cover;
+    /* Religion/Culture vibe */
+}
+
+.slide-6 {
+    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920') center/cover;
+    /* Landmark/Mosque vibe */
+}
+
+.slide-7 {
+    background: url('https://images.unsplash.com/photo-1528659556704-7493a7f80879?w=1920') center/cover;
+    /* History/Al Ain vibe */
+}
+
+.slide-8 {
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920') center/cover;
+    /* Conclusion/Modern skyline */
 }
 
 .section-badge {
@@ -515,9 +546,11 @@ body {
 }
 
 .glass-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(197, 160, 89, 0.4);
-    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--gold-primary);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(197, 160, 89, 0.2);
+    z-index: 10;
 }
 
 .card-icon {
