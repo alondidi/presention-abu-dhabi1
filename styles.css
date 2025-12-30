@@ -542,7 +542,7 @@ body {
 .feature-list li {
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 14px;
+    font-size: calc(14px * var(--slide-scale));
     color: var(--text-muted);
 }
 
@@ -641,7 +641,7 @@ body {
 }
 
 .culture-icon {
-    font-size: 40px;
+    font-size: calc(40px * var(--slide-scale));
     margin-bottom: 25px;
 }
 
@@ -761,7 +761,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 6px 15px;
     border-radius: 50px;
-    font-size: 10px;
+    font-size: calc(10px * var(--slide-scale));
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -810,7 +810,7 @@ body {
 }
 
 .essential-icon {
-    font-size: 30px;
+    font-size: calc(30px * var(--slide-scale));
     opacity: 0.8;
 }
 
@@ -855,7 +855,7 @@ body {
 }
 
 .amenities li {
-    font-size: 11px;
+    font-size: calc(11px * var(--slide-scale));
     background: rgba(255, 255, 255, 0.05);
     padding: 5px 12px;
     border-radius: 50px;
@@ -872,20 +872,20 @@ body {
 .dish-name {
     color: var(--white);
     font-weight: 500;
-    font-size: 14px;
+    font-size: calc(14px * var(--slide-scale));
     display: block;
     margin-bottom: 5px;
 }
 
 .dish-highlight p {
     margin: 0;
-    font-size: 12px;
+    font-size: calc(12px * var(--slide-scale));
     color: var(--text-muted);
     line-height: 1.6;
 }
 
 .hours {
-    font-size: 11px;
+    font-size: calc(11px * var(--slide-scale));
     color: var(--gold-primary);
     text-transform: uppercase;
     letter-spacing: 1px;

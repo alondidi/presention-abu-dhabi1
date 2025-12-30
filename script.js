@@ -35,6 +35,7 @@ class PresentationController {
 
             socket.on('remote-command', (cmd) => {
                 console.log('Received remote command:', cmd);
+                this.showRemoteFeedback(cmd);
 
                 // Navigation
                 if (cmd === 'next') this.nextSlide();
@@ -49,6 +50,56 @@ class PresentationController {
                 }
             });
         }
+    }
+
+    showRemoteFeedback(cmd) {
+        let feedback = document.getElementById('remoteFeedback');
+        if (!feedback) {
+            feedback = document.createElement('div');
+            feedback.id = 'remoteFeedback';
+            feedback.style.cssText = `
+                position: fixed;
+                bottom: 100px;
+                right: 40px;
+                background: var(--gold-primary, #C5A059);
+                color: #0A0E17;
+                padding: 10px 25px;
+                border-radius: 50px;
+                font-size: 13px;
+                font-weight: 700;
+                z-index: 9999;
+                pointer-events: none;
+                transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid rgba(255,255,255,0.2);
+            `;
+            document.body.appendChild(feedback);
+        }
+
+        const iconMap = {
+            'next': '⮕',
+            'prev': '⬅',
+            'font-up': 'A+',
+            'font-down': 'A-',
+            'font-reset': '↺',
+            'contrast-toggle': '🌓'
+        };
+
+        const icon = iconMap[cmd] || '📡';
+        feedback.innerHTML = `<span style="opacity: 0.7">REMOTE</span> <b>${icon} ${cmd.toUpperCase()}</b>`;
+        feedback.style.opacity = '1';
+        feedback.style.transform = 'translateY(0) scale(1)';
+
+        clearTimeout(this.feedbackTimeout);
+        this.feedbackTimeout = setTimeout(() => {
+            feedback.style.opacity = '0';
+            feedback.style.transform = 'translateY(20px) scale(0.9)';
+        }, 2000);
     }
 
     init() {
