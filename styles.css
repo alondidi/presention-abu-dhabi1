@@ -471,59 +471,62 @@ body {
    ============================================ */
 
 .slide-1 {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&v=2') center/cover;
-    /* Abu Dhabi Corniche */
+    background: url('https://images.unsplash.com/photo-1546412414-8035e1776c9a?w=1920&v=3') center/cover;
+    /* Abu Dhabi Etihad Towers Skyline */
 }
 
 .slide-2 {
-    background: url('https://images.unsplash.com/photo-1629814405374-279477fd25cf?w=1920&v=2') center/cover;
-    /* Abu Dhabi Urban street */
+    background: url('https://images.unsplash.com/photo-1552560229-edf0b634836c?w=1920&v=3') center/cover;
+    /* Abu Dhabi City Aerial */
 }
 
 .slide-3 {
-    background: url('https://images.unsplash.com/photo-1512413273187-548ec2c95af9?w=1920&v=2') center/cover;
-    /* Abu Dhabi Islands */
+    background: url('https://images.unsplash.com/photo-1629814405374-279477fd25cf?w=1920&v=3') center/cover;
+    /* Abu Dhabi Islands/Coastal */
 }
 
 .slide-4 {
-    background: url('https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1920&v=2') center/cover;
-    /* Masdar City Solar */
+    background: url('https://images.unsplash.com/photo-1597089542047-b987b532938f?w=1920&v=3') center/cover;
+    /* Industry/Port vibe */
 }
 
 .slide-5 {
-    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&v=2') center/cover;
-    /* Grand Mosque */
+    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&v=3') center/cover;
+    /* Grand Mosque General */
 }
 
 .slide-6 {
-    background: url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1920&v=2') center/cover;
+    background: url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1920&v=3') center/cover;
     /* Louvre Abu Dhabi */
 }
 
 .slide-7 {
-    background: url('https://images.unsplash.com/photo-1583311910626-7756f10c699c?w=1920&v=2') center/cover;
-    /* Jahili Fort Al Ain */
+    background: url('https://images.unsplash.com/photo-1583311910626-7756f10c699c?w=1920&v=3') center/cover;
+    /* Al Jahili Fort Al Ain */
 }
 
 .slide-8 {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&v=3') center/cover;
-    /* Skyline */
+    background: url('https://images.unsplash.com/photo-1512413273187-548ec2c95af9?w=1920&v=3') center/cover;
+    /* Stunning Night/Sunset Skyline */
 }
 
 /* Slide 6 Card Backgrounds */
 .mosque-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&v=2') center/cover;
+        url('https://images.unsplash.com/photo-1565552643163-d704ba8c973b?w=800&v=3') center/cover;
+    /* Distinct Mosque Detail */
 }
 
 .louvre-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&v=2') center/cover;
+        url('https://images.unsplash.com/photo-1559649712-921d6092b763?w=800&v=3') center/cover;
+    /* Louvre Detail */
 }
 
 .ferrari-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&v=2') center/cover;
+        url('https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&v=3') center/cover;
+    /* Yas Vibes */
 }
 
 .section-badge {
@@ -640,9 +643,7 @@ body {
    SLIDE 3: HISTORY & CULTURE
    ============================================ */
 
-.slide-3 {
-    background: url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=1920') center/cover;
-}
+
 
 .history-stats {
     display: flex;
@@ -715,9 +716,7 @@ body {
    SLIDE 4: ATTRACTIONS
    ============================================ */
 
-.slide-4 {
-    background: url('https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=1920') center/cover;
-}
+
 
 .attractions-showcase {
     display: grid;
@@ -753,20 +752,7 @@ body {
     transform: scale(1.1);
 }
 
-.mosque-bg {
-    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800') center/cover;
-}
 
-.louvre-bg {
-    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800') center/cover;
-}
-
-.ferrari-bg {
-    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800') center/cover;
-}
 
 .attraction-info {
     position: absolute;
