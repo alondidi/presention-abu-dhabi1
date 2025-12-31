@@ -102,6 +102,14 @@ body {
         inset 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
+/* Ensure it looks good absolutely positioned inside the slide */
+.slide .author-info {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 100 !important;
+}
+
 .author-badge-line {
     width: 2px;
     height: 30px;
@@ -272,17 +280,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
     transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
     transform: scale(1.05);
     /* Subtle zoom effect on inactive slides */
+    pointer-events: none !important;
+    z-index: 0 !important;
+    will-change: opacity, transform, visibility;
 }
 
 .slide.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: scale(1);
+    pointer-events: auto !important;
+    z-index: 10 !important;
 }
 
 .slide-overlay {
@@ -467,66 +480,99 @@ body {
 }
 
 /* ============================================
-   SLIDE 2: GEOGRAPHY & CLIMATE
+   SLIDE BACKGROUNDS & SPECIFIC STYLES
    ============================================ */
 
 .slide-1 {
-    background: url('https://images.unsplash.com/photo-1546412414-8035e1776c9a?w=1920&v=4') center/cover;
-    /* Intro: Etihad Towers Skyline */
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80') center/cover;
+    /* Intro: Abu Dhabi Corniche Skyline */
 }
 
 .slide-2 {
-    background: url('https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2024/08/12/abu-dhabi-safest-city-2-1-1000x750.png') center/cover;
-    /* Population: Dense Urban Street */
+    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&q=80') center/cover;
+    /* People/Faith: Grand Mosque Vibe */
 }
 
 .slide-3 {
-    background: url('https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2023/09/07/EAD-Mangrove-Planting-for-COP28.v2_web-0-1380-0-0-1024x768.jpg') center/cover;
-    /* Geography: Mangroves/Islands */
+    background: url('https://images.unsplash.com/photo-1630403310069-424c538a7c14?w=1920&q=80') center/cover;
+    /* Location: Bright Mangrove/Aerial (Jubail Island) */
 }
 
 .slide-4 {
-    background: url('https://www.tandctech.com/MediaFiles/Catalogueimages/eebeca62-62bc-4c14-8e10-e3d80ee0dea7.jpg.ashx?crop=auto&width=524&height=350&scale=both') center/cover;
-    /* Economy: Industrial/Port */
+    background: linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.7)), url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=1920&q=80') center/cover;
+    /* Regions: Desert with Overlay for readability */
 }
 
 .slide-5 {
-    background: url('https://visitabudhabi.ae/-/media/project/vad/what-to-see/national-attractions/sheikh-zayed-grand-mosque/new-rebrand-images/article-images/ad_dct_phoenix_30_grand-mosque_chinese_family_7975-copy-2-edit-2.jpg?rev=f0b00d3d82fb4980beb10f243f9098d0&cx=0&cy=0&cw=890&ch=586&hash=532E58D4E1133251F06C43ECDA2980E6') center/cover;
-    /* Religion: Grand Mosque Interior */
+    background: url('https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=1920&q=80') center/cover;
+    /* Economy: Modern Architecture */
 }
 
 .slide-6 {
-    background: url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1920&v=4') center/cover;
-    /* Landmarks: Mosque Exterior */
+    background: url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1920&q=80') center/cover;
+    /* Attractions: Louvre */
 }
 
 .slide-7 {
-    background: url('https://museumofwander.com/wp-content/uploads/2022/12/DSC07433.jpg') center/cover;
-    /* History: Al Jahili Fort */
+    background: url('https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?w=1920&q=80') center/cover;
+    /* History: Forts */
 }
 
 .slide-8 {
-    background: url('https://www.timeoutabudhabi.com/cloud/timeoutabudhabi/2021/09/09/2hrBl7CK-W-Abu-Dhabi-–-Yas-Island-(2)-1200x800.jpg') center/cover;
-    /* Conclusion: Yas Marina */
+    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover;
+    /* Conclusion: Yas/Ferrari */
 }
 
 .slide-9 {
-    background: url('https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=1920&v=1.1') center/cover;
+    background: url('https://images.unsplash.com/photo-1629215886638-316278c2e6f4?w=1920&q=80') center/cover;
+    /* Qasr Al Watan - Bright Exterior */
+}
+
+/* Region Cards for Slide 4 */
+.region-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.region-img-container {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Region Cards Images */
+.city-img {
+    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80');
+    /* Corniche */
+}
+
+.alain-img {
+    background-image: url('https://images.unsplash.com/photo-1563810452601-5743c680327c?w=600&q=80');
+    /* Oasis */
+}
+
+.dhafra-img {
+    background-image: url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=600&q=80');
+    /* Desert */
 }
 
 .mosque-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=800&v=4') center/cover;
+        url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800') center/cover;
 }
 
 .louvre-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&v=4') center/cover;
+        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800') center/cover;
 }
 
 .ferrari-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&v=4') center/cover;
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800') center/cover;
 }
 
 .section-badge {
