@@ -509,7 +509,7 @@ body {
 }
 
 .slide-6 {
-    background: url('https://th.bing.com/th/id/OIP.oOTI1wSEOjR9fAfzpFT1cgHaEK?w=273&h=180&c=7&r=0&o=7&pid=1.7&rm=3') center/cover;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/a/aa/LouvreAD_tree.jpg') center/cover;
     /* Attractions: Louvre */
 }
 
@@ -524,7 +524,7 @@ body {
 }
 
 .slide-9 {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBhDO9qWUuv2BtlWPPCjZ02vdVWu2H49X3w&s') center/cover;
+    background: url('https://wallpapercat.com/w/full/6/2/9/1557249-3840x2160-desktop-4k-abu-dhabi-wallpaper-photo.jpg') center/cover;
     /* Qasr Al Watan - Bright Exterior */
 }
 
@@ -572,7 +572,7 @@ body {
 
 .ferrari-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://bookingmaze.com/wp-content/uploads/2025/05/Ferrari-dp.jpg') center/cover;
+        url('https://cdn.twocontinents.com/Yas_Island_Abu_Dhabi_8b3d0f075d.jpg') center/cover;
 }
 
 .section-badge {
@@ -858,10 +858,6 @@ body {
 /* ============================================
    SLIDE 5: PRACTICAL INFO
    ============================================ */
-
-.slide-5 {
-    background: url('https://images.unsplash.com/photo-1546412414-e1885259563a?w=1920') center/cover;
-}
 
 .essentials-grid {
     display: grid;
