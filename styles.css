@@ -494,7 +494,7 @@ body {
 }
 
 .slide-3 {
-    background: url('https://images.unsplash.com/photo-1630403310069-424c538a7c14?w=1920&q=80') center/cover;
+    background: url('https://cdn.britannica.com/99/241299-050-44A2A623/Locator-map-Abu-Dhabi.jpg') center/cover;
     /* Location: Bright Mangrove/Aerial (Jubail Island) */
 }
 
@@ -504,7 +504,7 @@ body {
 }
 
 .slide-5 {
-    background: url('https://th.bing.com/th/id/OIP.oOTI1wSEOjR9fAfzpFT1cgHaEK?w=273&h=180&c=7&r=0&o=7&pid=1.7&rm=3') center/cover;
+    background: url('https://www.ledgerinsights.com/wp-content/uploads/2018/12/oil-wells-810x476.jpg') center/cover;
     /* Economy: Modern Architecture */
 }
 
@@ -519,12 +519,12 @@ body {
 }
 
 .slide-8 {
-    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover;
+    background: url('https://www.etihad.com/content/dam/eag/etihadairways/etihadcom/2025/global/products/deals/deals-experience-ad-happening-in-ad-1.jpg?imwidth=480&imdensity=2.625') center/cover;
     /* Conclusion: Yas/Ferrari */
 }
 
 .slide-9 {
-    background: url('https://images.unsplash.com/photo-1629215886638-316278c2e6f4?w=1920&q=80') center/cover;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBhDO9qWUuv2BtlWPPCjZ02vdVWu2H49X3w&s') center/cover;
     /* Qasr Al Watan - Bright Exterior */
 }
 
@@ -546,17 +546,17 @@ body {
 
 /* Region Cards Images */
 .city-img {
-    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80');
+    background-image: url('https://www.wanderlustmagazine.com/wp-content/uploads/2025/02/shutterstock_2496326747-scaled.jpg');
     /* Corniche */
 }
 
 .alain-img {
-    background-image: url('https://images.unsplash.com/photo-1563810452601-5743c680327c?w=600&q=80');
+    background-image: url('https://www.trawell.in/admin/images/upload/693333539Abu_dhabi_al_ain_palace_museum.jpg');
     /* Oasis */
 }
 
 .dhafra-img {
-    background-image: url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=600&q=80');
+    background-image: url('https://visitabudhabi.ae/-/media/project/vad/where-to-go/about-abu-dhabi/al-dhafra/new-rebrand-images/header/al-dhafra-header.jpg?rev=-1');
     /* Desert */
 }
 
@@ -567,12 +567,12 @@ body {
 
 .louvre-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800') center/cover;
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcUAwlkmQhtk3oSHbWbY2oyp_NC7ctY4K5iQ&s') center/cover;
 }
 
 .ferrari-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
-        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800') center/cover;
+        url('https://bookingmaze.com/wp-content/uploads/2025/05/Ferrari-dp.jpg') center/cover;
 }
 
 .section-badge {
