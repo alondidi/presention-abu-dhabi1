@@ -5,7 +5,7 @@
 class PresentationController {
     constructor() {
         this.currentSlide = 0;
-        this.totalSlides = 8;
+        this.totalSlides = 9;
         this.isAnimating = false;
 
         this.slides = document.querySelectorAll('.slide');
