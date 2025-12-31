@@ -510,7 +510,10 @@ body {
     /* Conclusion: Yas Marina */
 }
 
-/* Slide 6 Card Backgrounds */
+.slide-9 {
+    background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9));
+}
+
 .mosque-bg {
     background: linear-gradient(to bottom, rgba(10, 14, 23, 0.1), rgba(10, 14, 23, 0.9)),
         url('https://images.unsplash.com/photo-1548690596-f1722c190938?w=800&v=4') center/cover;
